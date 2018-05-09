@@ -5,6 +5,7 @@ import { Component } from "@angular/core";
   template: `
     <ActionBar title="My App" class="action-bar"></ActionBar>
     <!-- Your UI components go here -->
+    <Image src="~/images/apple.jpg"></Image>
   `
 })
 export class AppComponent {
