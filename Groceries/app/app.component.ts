@@ -7,6 +7,7 @@ import { Component } from "@angular/core";
       <Image src="res://logo_login" stretch="none" horizontalAlignment="center"></Image>
 
       <TextField
+        [text]="email"
         hint="Email Address"
         keyboardType="email"
         autocorrect="false"
@@ -28,7 +29,9 @@ import { Component } from "@angular/core";
   ]
 })
 export class AppComponent {
+  email = 'my@email.com';
+
   submit() {
-    console.log(`I submit the button! ${new Date()}`);
+    alert('You\'re using: ' + this.email);
   }
 }
