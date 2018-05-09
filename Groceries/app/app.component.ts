@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
       <Image src="res://logo_login" stretch="none" horizontalAlignment="center"></Image>
 
       <TextField
-        [text]="email"
+        [(ngModel)]="email"
         hint="Email Address"
         keyboardType="email"
         autocorrect="false"
