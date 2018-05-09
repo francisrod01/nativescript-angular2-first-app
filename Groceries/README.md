@@ -36,15 +36,6 @@ ActivityManager: Start proc 31225:org.nativescript.Groceries/u0a165 for activity
 JS: Angular is running in the development mode. Call enableProdMode() to enable the production mode.
 ```
 
-## NativeScript Image Builder ##
-
-[NativeScript Image Builder][4] can help you to generate images with the apropriate naming conventions and resolutions for iOS and Android.
-
-## References ##
-
-- [NativeScript API References][5]
-- [Angular doc Cheat Sheet to building templates][6]
-
 ## License ##
 
 MIT
@@ -53,6 +44,3 @@ MIT
   [1]: https://github.com/nativescript/sample-Groceries
   [2]: https://docs.nativescript.org/angular/tutorial/ng-chapter-0
   [3]: https://github.com/nativescript/docs
-  [4]: http://nsimage.brosteins.com/
-  [5]: https://docs.nativescript.org/api-reference/
-  [6]: https://angular.io/guide/cheatsheet
