@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 
+import { User } from './shared/user/user';
+
 @Component({
   selector: "my-app",
   template: `
@@ -7,7 +9,7 @@ import { Component } from "@angular/core";
       <Image src="res://logo_login" stretch="none" horizontalAlignment="center"></Image>
 
       <TextField
-        [(ngModel)]="email"
+        [(ngModel)]="user.email"
         hint="Email Address"
         keyboardType="email"
         autocorrect="false"
@@ -15,6 +17,7 @@ import { Component } from "@angular/core";
       ></TextField>
       
       <TextField
+        [(ngModel)]="user.password"
         hint="Password"
         secure="true"
       ></TextField>
@@ -29,11 +32,15 @@ import { Component } from "@angular/core";
   ]
 })
 export class AppComponent {
-  email = 'my@email.com';
+  user: User;
   isLoggingIn = true;
 
+  constructor() {
+    this.user = new User();
+  }
+
   submit() {
-    alert('You\'re using: ' + this.email);
+    alert('You\'re using: ' + this.user.email);
   }
   
   toggleDisplay() {
