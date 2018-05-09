@@ -19,8 +19,8 @@ import { Component } from "@angular/core";
         secure="true"
       ></TextField>
 
-      <Button text="Sign in" class="submit-button" (tap)="submit()"></Button>
-      <Button text="Sign up for Groceries"></Button>
+      <Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'" class="submit-button" (tap)="submit()"></Button>
+      <Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'" (tap)="toggleDisplay()"></Button>
     </StackLayout>
   `,
   styleUrls: [
@@ -30,8 +30,13 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   email = 'my@email.com';
+  isLoggingIn = true;
 
   submit() {
     alert('You\'re using: ' + this.email);
+  }
+  
+  toggleDisplay() {
+    this.isLoggingIn = !this.isLoggingIn;
   }
 }
